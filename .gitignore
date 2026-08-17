@@ -1,0 +1,36 @@
+# =========================
+# LaTeX build artifacts
+# =========================
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.synctex
+*.toc
+*.lof
+*.lot
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+
+# =========================
+# Generated resume PDFs
+# =========================
+*/resume.pdf
+
+# Keep explicitly versioned PDFs
+!/undergrad/versions/*.pdf
+
+# =========================
+# OS / Editor junk
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

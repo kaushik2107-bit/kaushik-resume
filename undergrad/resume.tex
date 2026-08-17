@@ -1,0 +1,220 @@
+\documentclass[letterpaper,11pt]{article}
+
+% ChkTeX's whitespace and dash heuristics produce false positives for the
+% multiline command arguments and hyphens in URLs used throughout this file.
+% chktex-file 1
+% chktex-file 8
+
+% Packages
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  citecolor=blue,
+  anchorcolor=red
+]{hyperref}
+\usepackage{geometry}
+
+% Page layout
+\geometry{
+  top=6mm,
+  bottom=6mm,
+  left=0.35in,
+  right=0.35in
+}
+
+\pagestyle{empty}
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Section formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}: #2 \vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeItemDup}[1]{
+  \item\small{
+    #1 \vspace{-2pt}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small #3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{
+  \resumeItem{#1}{#2}\vspace{-4pt}
+}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{
+  \begin{itemize}[leftmargin=*]
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+  \end{itemize}
+}
+
+\newcommand{\resumeItemListStart}{
+  \begin{itemize}
+}
+
+\newcommand{\resumeItemListEnd}{
+  \end{itemize}\vspace{-5pt}
+}
+
+\begin{document}
+
+%---------- HEADING ----------
+\begin{minipage}{\textwidth}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\Large Kaushik Bhowmick} \\
+    Email: \href{mailto:kaushiksbhowmick@gmail.com}{kaushiksbhowmick@gmail.com}
+      & Mobile: +91 79840 59652 \\
+    LinkedIn: \href{https://www.linkedin.com/in/kaushik-bhowmick-3064a4155/}{Kaushik Bhowmick}
+      & Github: \href{https://github.com/kaushik2107-bit}{kaushik2107-bit}
+  \end{tabular*}
+\end{minipage}
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Sardar Vallabhbhai National Institute of Technology}{Surat, Gujarat}
+    {Bachelor of Technology in Computer Science and Engineering; CGPA\@: 8.80}{December 2021 – June 2025}
+  \resumeSubheading
+    {Jay International School}{Rajkot, Gujarat}
+    {Senior Secondary; Percentage: 95.4}{June 2018 – May 2020}
+\resumeSubHeadingListEnd
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Mastercard}{Pune, Maharashtra}
+    {Software Developer Engineer - I}{Jun 2025 – Present}
+  \resumeItemListStart
+    \resumeItemDup{
+      Implementing performance optimizations in the Ledger container to increase settlement file processing capacity from 2M to 60M+ clearing transactions in one cycle.
+    }
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Atlas Consolidated Pvt. Ltd. - \href{https://drive.google.com/file/d/1-1JcOflWugK71HL7gtVAvRdsyqOLrf0b/view?usp=sharing}{Certificate}}
+    {Hyderabad, Telangana}
+    {Software Developer Engineer Intern}{Jan 2025 – May 2025}
+  \resumeItemListStart
+    \resumeItemDup{
+      Implemented unit tests, improving test coverage to 91\% class, 94\% line, 88\% method, and 87\% branch coverage.
+    }
+    \resumeItemDup{
+      Re-architected a multi-level transaction aggregation workflow by replacing a slow, recursive Kafka-based process with an efficient prefix-based database query system, significantly boosting processing speed and ensuring real-time data consistency.
+    }
+  \resumeItemListEnd
+
+  \resumeSubheading
+    {Mastercard - \href{https://drive.google.com/file/d/1WEvptUsMOdSmCnjSDBhhq8D5PA-GEmfi/view?usp=sharing}{Certificate}}
+    {Pune, Maharashtra}
+    {Software Developer Engineer Intern}{May 2024 – July 2024}
+  \resumeItemListStart
+    \resumeItemDup{
+      Engineered a scheduler tracker service API with Java, Spring Boot, Spring Schedulers, and PostgreSQL to boost productivity and automate tasks.
+    }
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%---------- PROJECTS ----------
+\section{Projects}
+\resumeSubHeadingListStart
+  \resumeItem
+    {Chess Bot - (Personal project) - \href{https://github.com/kaushik2107-bit/aurora}{Github Link} - \href{https://lichess.org/@/PurpleHunter}{Project Link}}
+    {\newline \textbf{Technologies}: C++, OOP}
+  \vspace{-0.4em}
+  \begin{itemize}[itemsep=-2pt]
+    \item Built a chess bot capable of generating legal and optimal moves at 15 million nodes per second.
+    \item Reached a search speed of 1 million nodes per second, achieving a performance level equivalent to a 2500 rating.
+  \end{itemize}
+
+  \resumeItem
+    {Search Engine (Personal Project) - \href{https://github.com/kaushik2107-bit/search-engine}{Github Link} - \href{https://search-engine-client-exp2.vercel.app/}{Project Link}}
+    {\newline \textbf{Technologies}: Typescript}
+  \vspace{-0.4em}
+  \begin{itemize}[itemsep=-2pt]
+    \item Divided the project into 3 stages: web crawler, page rank, TF-IDF scoring, and cosine similarity.
+    \item Returns search results in less than 1 second after indexing over a million websites.
+  \end{itemize}
+
+  \resumeItem
+    {Relaxed Graph Substitutions Using ONNX (Group Project) - \href{https://github.com/thehthakur/Take_It_Easy}{Github Link}}
+    {\newline \textbf{Technologies}: Python, ONNX, Tensorflow}
+  \vspace{-0.4em}
+  \begin{itemize}[itemsep=-2pt]
+    \item A prototype implementation of relaxed graph substitution techniques, validating their effectiveness in optimizing computation graphs and improving efficiency.
+    \item Implemented 3 relaxed substitutions and a cost model incorporating operations and memory constraints.
+  \end{itemize}
+\resumeSubHeadingListEnd
+
+%---------- ACHIEVEMENTS ----------
+\section{Achievements}
+\resumeSubHeadingListStart
+  \resumeSubItem
+    {ICPC Amritapuri Regionals 2023}
+    {\textbf{Rank 95} out of 250 teams}
+  \resumeSubItem
+    {ICPC Preliminary Round 2023}
+    {\textbf{Rank 301}}
+  \resumeSubItem
+    {ACM Inception 7.0}
+    {\textbf{Rank 2} conducted by ACM NIT Surat}
+\resumeSubHeadingListEnd
+
+%---------- SKILLS ----------
+\section{Skills}
+\resumeSubHeadingListStart
+  \resumeSubItem
+    {Languages}
+    {Javascript, C/C++, Java, Typescript, HTML, CSS}
+  \resumeSubItem
+    {Database}
+    {MySQL, PostgreSQL, Firebase, MongoDB}
+  \resumeSubItem
+    {Framework}
+    {NextJS, ReactJS, NodeJS, Tailwind CSS, Spring Boot}
+  \resumeSubItem
+    {Other}
+    {Git/Github, Linux Commands, Communication, Collaboration, Flexibility, Committable, Leadership}
+\resumeSubHeadingListEnd
+
+%---------- CODING PROFILES ----------
+\section{Coding Profiles}
+\resumeSubHeadingListStart
+  \begin{minipage}[t]{0.48\linewidth}
+    \resumeSubItem
+      {\href{https://codeforces.com/profile/kaushik.bhowmick}{Codeforces}}
+      {1599 (max rating) (Specialist)}
+  \end{minipage}%
+  \begin{minipage}[t]{0.48\linewidth}
+    \resumeSubItem
+      {\href{https://www.codechef.com/users/foolish_cow}{Codechef}}
+      {1826 (max rating) (4 star)}
+  \end{minipage}
+\resumeSubHeadingListEnd
+
+\end{document}
